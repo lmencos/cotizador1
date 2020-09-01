@@ -62,9 +62,10 @@ const Formulario = () => {
       <Campo>
         <Label htmlFor="">Marca :</Label>
         <Select name="" id="">
+          <option value="">-- Seleccione --</option>
           <option value="americano">Americano</option>
-          <option value="europeo">Europeo</option>
           <option value="asiatico">Asiático</option>
+          <option value="europeo">Europeo</option>
         </Select>
       </Campo>
       <Campo>
