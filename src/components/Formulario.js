@@ -60,7 +60,7 @@ const Formulario = () => {
   return ( 
     <form action="">
       <Campo>
-        <Label htmlFor="">Marca:</Label>
+        <Label htmlFor="">Marca :</Label>
         <Select name="" id="">
           <option value="americano">Americano</option>
           <option value="europeo">Europeo</option>
@@ -68,7 +68,7 @@ const Formulario = () => {
         </Select>
       </Campo>
       <Campo>
-        <Label htmlFor="">Año:</Label>
+        <Label htmlFor="">Año :</Label>
         <Select name="" id="">
         <option value="">-- Seleccione --</option>
         <option value="2021">2021</option>
@@ -84,7 +84,7 @@ const Formulario = () => {
         </Select>
       </Campo>
       <Campo>
-        <Label htmlFor="">Plan:</Label>
+        <Label htmlFor="">Plan :</Label>
         <InputRadio 
           type="radio"
           name="plan"
