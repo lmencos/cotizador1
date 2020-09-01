@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './components/Header';
 import styled from '@emotion/styled';
+import Formulario from './components/Formulario';
 
 //-------------------------------------------------------------
 //Estilos para centrar el contenido
@@ -25,7 +26,9 @@ function App() {
         title="Cotizador de seguros Lucho"
       />
       <ContenedorFormulario>
-        
+        <Formulario 
+          
+        />
       </ContenedorFormulario>
     </Contenedor>
   );
