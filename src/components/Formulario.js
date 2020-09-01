@@ -44,17 +44,17 @@ const Boton = styled.button`
     cursor: pointer;
   }
 `;
-// const Error = styled.div `
-//   background-color: red;
-//   color: white;
-//   padding: 1rem;
-//   width: 91%;
-//   text-align: center;
-//   border: 1px solid #005CC8;
-//   border-radius: 3px;
-//   margin-bottom: 1rem;
-//   font-weight: bold;
-// `;
+const Error = styled.div `
+  background-color: #26C6DA;
+  color: white;
+  padding: 1rem;
+  width: 91%;
+  text-align: center;
+  border: 1px solid #005CC8;
+  border-radius: 3px;
+  margin-bottom: 1rem;
+  font-weight: bold;
+`;
 //-----------------------------------------------------------
 const Formulario = () => {
   const [ datos, guardarDatos ] = useState({
@@ -62,6 +62,9 @@ const Formulario = () => {
     year: '',
     plan: ''
   });
+
+//State para manejar el erro
+const [ error, guardarError ] = useState(false);
 
   //Extraer los valores del state de datos "datos"
   const { marca, year, plan }  = datos;
@@ -74,8 +77,23 @@ const Formulario = () => {
     })
   };
 
+  //Cuenado el usuario prsiona el botón de cotizar
+  const cotizarSeguro = (e) => {
+    e.preventDefault();
+
+    if(marca.trim() === '' || year.trim() === '' || plan === ''){
+      guardarError(true);
+      return;
+    }
+      guardarError(false);
+  };
+
   return ( 
-    <form action="">
+    <form 
+      onSubmit={cotizarSeguro}
+    >
+      { error? <Error>Favor de llenar todos los campos</Error>  : null }
+
       <Campo>
         <Label htmlFor="">Marca :</Label>
         <Select 
