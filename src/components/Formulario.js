@@ -44,17 +44,17 @@ const Boton = styled.button`
     cursor: pointer;
   }
 `;
-const Error = styled.div `
-  background-color: red;
-  color: white;
-  padding: 1rem;
-  width: 91%;
-  text-align: center;
-  border: 1px solid #005CC8;
-  border-radius: 3px;
-  margin-bottom: 1rem;
-  font-weight: bold;
-`;
+// const Error = styled.div `
+//   background-color: red;
+//   color: white;
+//   padding: 1rem;
+//   width: 91%;
+//   text-align: center;
+//   border: 1px solid #005CC8;
+//   border-radius: 3px;
+//   margin-bottom: 1rem;
+//   font-weight: bold;
+// `;
 //-----------------------------------------------------------
 const Formulario = () => {
   return ( 
