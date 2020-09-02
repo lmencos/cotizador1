@@ -24,3 +24,8 @@ export const costoMarca = ( marca ) => {
   }
   return incrementoMarca;
 };
+
+//retorna factor de incremento por tipo de plan(básico o completo)
+export const factorPlan = (plan) => {
+  return ( plan === 'basico' )? 1.2  : 1.5;
+};

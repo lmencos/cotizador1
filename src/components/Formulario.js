@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
-import { obtenerDiferenciaYear, costoMarca } from '../Helper';
+import { obtenerDiferenciaYear, costoMarca, factorPlan } from '../Helper';
 
 //-----------------------------------------------------------
 //Estilo para los campos del formulario (espaciado)
@@ -106,8 +106,11 @@ const [ error, guardarError ] = useState(false);
       console.log('El costo en función del año y marca: ', resultado);
 
       //Plan básico +20%
-
       //Plan completo +50%
+      const incrementoPlan = factorPlan(plan);
+        console.log('Factor de incremento por tipo de plan: ', incrementoPlan);
+        resultado = parseFloat(incrementoPlan * resultado).toFixed(2);
+        console.log('El costo total es de: ', resultado);
 
       //Total de la cotización
 
