@@ -57,7 +57,7 @@ const Error = styled.div `
   font-weight: bold;
 `;
 //-----------------------------------------------------------
-const Formulario = () => {
+const Formulario = ({ guardarResumenCotizacion }) => {
   const [ datos, guardarDatos ] = useState({
     marca: '',
     year: '',
@@ -113,6 +113,10 @@ const [ error, guardarError ] = useState(false);
         console.log('El costo total es de: ', resultado);
 
       //Total de la cotización
+      guardarResumenCotizacion({
+        cotizacion: resultado,
+        datos
+      });
 
   };
 

@@ -29,3 +29,8 @@ export const costoMarca = ( marca ) => {
 export const factorPlan = (plan) => {
   return ( plan === 'basico' )? 1.2  : 1.5;
 };
+
+//Primera letra en mayúscula
+export const primeraMayuscula = ( texto ) => {
+  return texto.charAt(0).toUpperCase() + texto.slice(1);
+};
