@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
-import { obtenerDiferenciaYear } from '../Helper';
+import { obtenerDiferenciaYear, costoMarca } from '../Helper';
 
 //-----------------------------------------------------------
 //Estilo para los campos del formulario (espaciado)
@@ -97,11 +97,13 @@ const [ error, guardarError ] = useState(false);
       
       //Por cada año hacía atrás restar 3%
       resultado -= (( diferenciaYear * 3 ) * resultado ) / 100;
-      console.log('costo base en función del año es :', resultado)
+      console.log('costo base en función del año es :', resultado);
 
       //Americano +15%
       //Asiático +5%
       //Europeo +30%
+      resultado = costoMarca(marca) * resultado;
+      console.log('El costo en función del año y marca: ', resultado);
 
       //Plan básico +20%
 
