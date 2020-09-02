@@ -38,7 +38,7 @@ function App() {
     <Contenedor className="App">
       <p></p>
       <Header 
-        title="Seguros luchísimo"
+        title="Seguros Luchísimo"
       />
       <ContenedorFormulario>
         <Formulario 

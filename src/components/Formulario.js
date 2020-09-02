@@ -89,14 +89,14 @@ const [ error, guardarError ] = useState(false);
       guardarError(false);
 
       //Base de costeo = 2000
-      let resultado = 2000;
+      let resultado = 3300;
 
       //Obtener la diferencia de años
       const diferenciaYear = obtenerDiferenciaYear(year);
       console.log('la diferencia de años es: ', diferenciaYear);
       
       //Por cada año hacía atrás restar 3%
-      resultado -= (( diferenciaYear * 3 ) * resultado ) / 100;
+      resultado -= (( diferenciaYear * 3.3 ) * resultado ) / 100;
       console.log('costo base en función del año es :', resultado);
 
       //Americano +15%

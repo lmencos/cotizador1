@@ -11,15 +11,15 @@ export const costoMarca = ( marca ) => {
   let incrementoMarca;
   switch(marca) {
     case 'americano':
-      incrementoMarca = 1.15;
+      incrementoMarca = 1.17;
       break;
     case 'asiatico':
-      incrementoMarca = 1.05;
+      incrementoMarca = 1.08;
       break;
     case 'europeo':
-      incrementoMarca = 1.3;
+      incrementoMarca = 1.35;
       break;
-    default: incrementoMarca = 1.15;
+    default: incrementoMarca = 1.17;
       break;
   }
   return incrementoMarca;
@@ -27,7 +27,7 @@ export const costoMarca = ( marca ) => {
 
 //retorna factor de incremento por tipo de plan(básico o completo)
 export const factorPlan = (plan) => {
-  return ( plan === 'basico' )? 1.2  : 1.5;
+  return ( plan === 'basico' )? 1.2  : 1.26;
 };
 
 //Primera letra en mayúscula
