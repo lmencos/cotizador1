@@ -57,7 +57,7 @@ const Error = styled.div `
   font-weight: bold;
 `;
 //-----------------------------------------------------------
-const Formulario = ({ guardarResumenCotizacion }) => {
+const Formulario = ({ guardarResumenCotizacion, guardarCargando }) => {
   const [ datos, guardarDatos ] = useState({
     marca: '',
     year: '',
@@ -112,12 +112,18 @@ const [ error, guardarError ] = useState(false);
         resultado = parseFloat(incrementoPlan * resultado).toFixed(2);
         console.log('El costo total es de: ', resultado);
 
-      //Total de la cotización
-      guardarResumenCotizacion({
-        cotizacion: resultado,
-        datos
-      });
+      //Aparece el spinner por 2.1undos seg
+      guardarCargando(true);
+      setTimeout(()=> {
+        //Elimina spinner
+        guardarCargando(false);
 
+        //Total de la cotización datos pasan al componente principal
+        guardarResumenCotizacion({
+          cotizacion: resultado,
+          datos
+        });
+      }, 1200);
   };
 
   return ( 
