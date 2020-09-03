@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from '@emotion/styled';
 import { obtenerDiferenciaYear, costoMarca, factorPlan } from '../Helper';
+import PropTypes from 'prop-types';
 
 //-----------------------------------------------------------
 //Estilo para los campos del formulario (espaciado)
@@ -120,7 +121,7 @@ const [ error, guardarError ] = useState(false);
 
         //Total de la cotización datos pasan al componente principal
         guardarResumenCotizacion({
-          cotizacion: resultado,
+          cotizacion: Number(resultado),
           datos
         });
       }, 1200);
@@ -186,5 +187,9 @@ const [ error, guardarError ] = useState(false);
     </form>
    );
 }
+Formulario.propTypes = {
+  guardarResumenCotizacion: PropTypes.func.isRequired,
+  guardarCargando: PropTypes.func.isRequired
+};
  
 export default Formulario;
